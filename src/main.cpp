@@ -52,7 +52,7 @@ int main(int argc, char **argv)
 {
 #ifndef Q_OS_WIN
     // Prohibit using sudo or kdesu (but allow using the root user directly)
-    if (getuid() == 0) {
+   /* if (getuid() == 0) {
         if (!qEnvironmentVariableIsEmpty("SUDO_USER")) {
             std::cout << "Running Dolphin with sudo is not supported as it can cause bugs and expose you to security vulnerabilities. Instead, install the "
                          "`kio-admin` package from your distro and use it to manage root-owned locations by right-clicking on them and selecting \"Open as "
@@ -66,7 +66,7 @@ int main(int argc, char **argv)
                       << std::endl;
             return EXIT_FAILURE;
         }
-    }
+    }*/
 #endif
 
     /**
